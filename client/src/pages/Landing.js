@@ -263,7 +263,7 @@ const Landing = () => {
             </div>
 
             <div className="">
-              <div className=" ">
+              <div className="">
                 <p className="uppercase text-blue-500">Office address</p>
                 <p>
                   Address No 18 behind Alh Ayo House sawmill area
@@ -272,12 +272,12 @@ const Landing = () => {
               </div>
               <div className=" ">
                 <p className="uppercase text-blue-500">phone number</p>
-                <p>07031362263</p>
+                <p>08077797217</p>
               </div>
               <div className=" lowercase">
                 <p className="uppercase text-blue-500">Contact us</p>
                 <p>admin@nexusData.com.ng</p>
-                <p>manmadenumber@gmail.com</p>
+                <p>davidaina54@gmail.com</p>
               </div>
             </div>
           </div>
