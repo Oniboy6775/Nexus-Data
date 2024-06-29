@@ -36,14 +36,14 @@ const DashBoard = () => {
   };
 
   const [showAlert, setShowAlert] = useState(false);
-  useEffect(() => {
-    if (user.userType === "smart earner") {
-      const time = Math.random() * 7000;
-      setTimeout(() => {
-        setShowAlert(true);
-      }, [time]);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (user.userType === "smart earner") {
+  //     const time = Math.random() * 7000;
+  //     setTimeout(() => {
+  //       setShowAlert(true);
+  //     }, [time]);
+  //   }
+  // }, []);
 
   const navigation = [
     { name: "Airtime", image: airtime, link: "/profile/buyAirtime" },
