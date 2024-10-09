@@ -263,12 +263,9 @@ const Landing = () => {
             </div>
 
             <div className="">
-              <div className="">
+              <div className=" ">
                 <p className="uppercase text-blue-500">Office address</p>
-                <p>
-                  Address No 18 behind Alh Ayo House sawmill area
-                  Ilorin, kwara state
-                </p>
+                <p>Iorin, Kwara state</p>
               </div>
               <div className=" ">
                 <p className="uppercase text-blue-500">phone number</p>
@@ -276,7 +273,7 @@ const Landing = () => {
               </div>
               <div className=" lowercase">
                 <p className="uppercase text-blue-500">Contact us</p>
-                <p>admin@nexusData.com.ng</p>
+                <p>admin@nexusdata.com.ng</p>
                 <p>davidaina54@gmail.com</p>
               </div>
             </div>

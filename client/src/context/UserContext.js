@@ -1055,16 +1055,30 @@ export const AppProvider = ({ children }) => {
     }
   };
   const updateKyc = async (id) => {
-    const { bvn, nin } = state;
+    const { verificationMethod, verificationNo } = state;
     try {
       dispatch({ type: START_LOADING });
       let payload = {};
-      if (nin) payload.nin = nin;
-      if (bvn) payload.bvn = bvn;
+      if (verificationMethod == "nin") payload.nin = verificationNo;
+      if (verificationMethod == "bvn") payload.bvn = verificationNo;
       const { data } = await authFetch.post("/auth/updateKyc", payload);
       toast(data.msg);
       dispatch({ type: STOP_LOADING });
       fetchTransaction();
+    } catch (e) {
+      toast.error(e.response.data.msg);
+      dispatch({ type: STOP_LOADING });
+    }
+  };
+  const resetUserPassword = async (userId) => {
+    try {
+      dispatch({ type: START_LOADING });
+      const { data } = await authFetch.post("/admin/resetUserPassword", {
+        userId,
+      });
+      toast(data.msg);
+      fetchUser();
+      dispatch({ type: STOP_LOADING });
     } catch (e) {
       toast.error(e.response.data.msg);
       dispatch({ type: STOP_LOADING });
@@ -1128,6 +1142,7 @@ export const AppProvider = ({ children }) => {
         withdrawEarnings,
         getCostPriceAndSupplier,
         updateKyc,
+        resetUserPassword,
       }}
     >
       {children}
