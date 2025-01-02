@@ -93,15 +93,15 @@ const DashBoard = () => {
             >
               fund your wallet
             </button>
-            {!user.bvn && !user.nin && (
+            {/* {!user.bvn && !user.nin && (
               <button
                 className="btn btn-danger"
                 onClick={() => setKycModal(true)}
               >
                 update kyc
               </button>
-            )}
-            {kycModal && <KYCModals close={() => setKycModal(!kycModal)} />}
+            )} */}
+            {/* {kycModal && <KYCModals close={() => setKycModal(!kycModal)} />} */}
           </div>
         </div>
       </div>
